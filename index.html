@@ -397,81 +397,6 @@ nav.scrolled .nav-cta .btn { color:var(--ink); border-color:var(--ink); }
 .cta-content p { opacity:.85; margin-bottom:1.8rem; }
 .cta-buttons { display:flex; gap:.9rem; justify-content:center; flex-wrap:wrap; }
 
-/* FOOTER */
-footer {
-  background:var(--ink);
-  color:var(--white);
-  margin:0 3.5% 28px;
-  border-radius:16px;
-  padding:4rem 4% 1.8rem;
-  box-shadow:0 16px 48px rgba(28,25,22,0.12);
-}
-.footer-main {
-  max-width:1100px;
-  margin:0 auto 2.3rem;
-  display:grid;
-  grid-template-columns:1.4fr 1fr 1fr 1.2fr;
-  gap:2.5rem;
-}
-.footer-brand .logo {
-  color:var(--white);
-  font-size:1.5rem;
-  display:block;
-  margin-bottom:1rem;
-}
-.footer-brand p {
-  color:rgba(255,252,250,.45);
-  font-size:.9rem;
-  max-width:250px;
-  margin-bottom:1.4rem;
-}
-.footer-heroine {
-  display:flex; align-items:center; gap:.9rem;
-}
-.footer-heroine img {
-  width: 72px;
-  height: 88px;
-  border-radius: 8px;
-  object-fit: cover;
-  object-position: top center;
-  border: none;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-  background: transparent;
-}
-.footer-heroine strong { display:block; font-size:.9rem; }
-.footer-heroine span { font-size:.75rem; color:rgba(255,252,250,.4); }
-.footer-col h4 { font-size:.85rem; letter-spacing:.06em; margin-bottom:1.1rem; }
-.footer-col ul { list-style:none; }
-.footer-col ul li { margin-bottom:.45rem; }
-.footer-col ul a {
-  color:rgba(255,252,250,.45);
-  font-size:.88rem;
-  transition:color .3s;
-}
-.footer-col ul a:hover { color:var(--gold-soft); }
-.footer-contacts { display:flex; flex-direction:column; gap:.55rem; }
-.footer-contacts .btn {
-  width:100%; justify-content:center;
-  color:var(--white);
-  border-color:rgba(255,252,250,.2);
-  padding:.75rem;
-  font-size:.7rem;
-}
-.footer-contacts .btn:hover {
-  background:var(--sage);
-  border-color:var(--sage);
-  color:var(--ink);
-}
-.footer-bottom {
-  max-width:1100px;
-  margin:0 auto;
-  padding-top:1.5rem;
-  border-top:1px solid rgba(255,252,250,.08);
-  display:flex; justify-content:space-between;
-  font-size:.78rem;
-  color:rgba(255,252,250,.3);
-}
-
 /* ========== MODAL CARD ========== */
 .modal-backdrop {
   position:fixed; inset:0;
@@ -952,46 +877,29 @@ img {
 </section>
 
 
-
 <!-- FOOTER -->
-<footer>
-  <div class="footer-main">
-    <div class="footer-brand">
-      <a href="#" class="logo">LIORA</a>
-      <p>Студия оформления праздников</p>
-      <div class="footer-heroine">
-        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=240&auto=format&fit=crop" alt="Анна" loading="lazy" decoding="async">
-        <div>
-          <strong>Анна</strong>
-          <span>Основатель студии</span>
-        </div>
-      </div>
+<footer class="liora-footer">
+  <div class="footer-stage">
+
+    <div class="footer-title">
+      <span>ОФОРМЛЕНИЕ</span>
+      <span>ПРАЗДНИКОВ</span>
     </div>
-    <div class="footer-col">
-      <h4>Праздники</h4>
-      <ul>
-        <li><a href="#works">Свадьбы</a></li>
-        <li><a href="#types">Корпоративы</a></li>
-        <li><a href="#types">Частные</a></li>
-        <li><a href="#types">Детские</a></li>
-      </ul>
+
+    <div class="footer-figure">
+      <!-- сюда позже поставим PSD девушки -->
+      <img src="./images/footer-woman.webp" alt="" loading="lazy" decoding="async">
     </div>
-    <div class="footer-col">
-      <h4>Навигация</h4>
-      <ul>
-        <li><a href="#works">Работы</a></li>
-        <li><a href="#inquiry">Контакты</a></li>
-      </ul>
+
+    <div class="footer-actions">
+      <a href="https://t.me/" target="_blank">Telegram</a>
+      <a href="https://vk.com/" target="_blank">ВКонтакте</a>
+      <a href="https://www.avito.ru/" target="_blank">Авито</a>
+      <a href="#inquiry" class="footer-action-main">Обсудить праздник</a>
     </div>
-    <div class="footer-col">
-      <h4>Связаться</h4>
-      <div class="footer-contacts">
-        <a href="https://t.me/" class="btn" target="_blank">Telegram</a>
-        <a href="https://vk.com/" class="btn" target="_blank">ВКонтакте</a>
-        <a href="https://www.avito.ru/" class="btn" target="_blank">Авито</a>
-      </div>
-    </div>
+
   </div>
+
   <div class="footer-bottom">
     <span>© 2026 Liora</span>
     <span>Москва и область</span>

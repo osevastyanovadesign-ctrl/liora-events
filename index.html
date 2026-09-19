@@ -396,6 +396,139 @@ nav.scrolled .nav-cta .btn { color:var(--ink); border-color:var(--ink); }
 .cta-content h2 { font-size:clamp(2.1rem,3.6vw,2.8rem); margin-bottom:1rem; }
 .cta-content p { opacity:.85; margin-bottom:1.8rem; }
 .cta-buttons { display:flex; gap:.9rem; justify-content:center; flex-wrap:wrap; }
+  /* FOOTER — LIORA FINAL SCENE */
+
+.liora-footer {
+  position:relative;
+  margin:0 3.5% 28px;
+  min-height:620px;
+  padding:0 4% 1.8rem;
+  background:var(--sage-deep);
+  color:var(--white);
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 16px 48px rgba(28,25,22,0.12);
+}
+
+.footer-stage {
+  position:relative;
+  min-height:570px;
+  max-width:1280px;
+  margin:0 auto;
+}
+
+/* Большой заголовок слева */
+.footer-title {
+  position:absolute;
+  left:0;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:1;
+  display:flex;
+  flex-direction:column;
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(4.2rem,6.8vw,7.2rem);
+  line-height:.82;
+  font-weight:500;
+  color:var(--ivory);
+  letter-spacing:-.035em;
+  white-space:nowrap;
+}
+
+.footer-title span:last-child {
+  margin-left:4rem;
+}
+
+/* Девушка строго по центру */
+.footer-figure {
+  position:absolute;
+  z-index:2;
+  left:50%;
+  bottom:0;
+  transform:translateX(-50%);
+  height:96%;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  pointer-events:none;
+}
+
+.footer-figure img {
+  display:block;
+  height:100%;
+  width:auto;
+  max-width:none;
+  object-fit:contain;
+  object-position:center bottom;
+  filter:drop-shadow(0 18px 30px rgba(28,25,22,.12));
+}
+
+/* Кнопки справа — в одну горизонтальную линию */
+.footer-actions {
+  position:absolute;
+  z-index:3;
+  right:0;
+  top:50%;
+  transform:translateY(-50%);
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  gap:.65rem;
+  width:180px;
+}
+
+.footer-actions a {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:42px;
+  padding:.7rem 1rem;
+  border:1px solid rgba(255,252,250,.48);
+  color:var(--ivory);
+  font-family:'Outfit',sans-serif;
+  font-size:.65rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  white-space:nowrap;
+  transition:
+    background .35s ease,
+    border-color .35s ease,
+    color .35s ease,
+    transform .35s ease;
+}
+
+.footer-actions a:hover {
+  background:rgba(247,243,237,.12);
+  border-color:var(--gold-soft);
+  color:var(--gold-soft);
+  transform:translateY(-3px);
+}
+
+.footer-actions .footer-action-main {
+  background:var(--ivory);
+  border-color:var(--ivory);
+  color:var(--sage-deep);
+}
+
+.footer-actions .footer-action-main:hover {
+  background:var(--gold-soft);
+  border-color:var(--gold-soft);
+  color:var(--ink);
+}
+
+/* Нижняя строка */
+.liora-footer .footer-bottom {
+  position:relative;
+  z-index:4;
+  max-width:1280px;
+  margin:0 auto;
+  padding-top:1.2rem;
+  border-top:1px solid rgba(255,252,250,.16);
+  display:flex;
+  justify-content:space-between;
+  font-size:.72rem;
+  color:rgba(255,252,250,.55);
+}
 
 /* ========== MODAL CARD ========== */
 .modal-backdrop {

@@ -420,44 +420,95 @@ nav.scrolled .nav-cta .btn { color:var(--ink); border-color:var(--ink); }
 /* Большой заголовок слева */
 .footer-title {
   position:absolute;
-  left:-1.5%;
+  left:-1%;
   top:50%;
   transform:translateY(-50%);
   z-index:1;
-  display:flex;
-  flex-direction:column;
-  gap:-0.2rem;
+
+  width:480px;
+  height:360px;
+
   color:var(--ivory);
   white-space:nowrap;
-  letter-spacing:-.045em;
+  letter-spacing:-.055em;
 }
 
-.footer-word {
-  display:flex;
-  align-items:baseline;
-  line-height:.78;
+.footer-title span {
+  position:absolute;
+  display:block;
+  line-height:.72;
 }
 
-.footer-word-top {
-  margin-left:0;
-}
+/* ОФОРМЛЕНИЕ */
 
-.footer-word-bottom {
-  margin-left:3.8rem;
-  margin-top:.15rem;
-}
-
-.footer-word .f-serif {
+.footer-title .ft-1 {
+  left:0;
+  top:10px;
   font-family:'Cormorant Garamond',serif;
-  font-size:clamp(5rem,7vw,7.6rem);
+  font-size:7rem;
   font-weight:500;
 }
 
-.footer-word .f-sans {
+.footer-title .ft-2 {
+  left:105px;
+  top:0;
   font-family:'Outfit',sans-serif;
-  font-size:clamp(3.1rem,4.6vw,5.2rem);
+  font-size:4.4rem;
   font-weight:300;
-  letter-spacing:-.065em;
+  letter-spacing:-.08em;
+}
+
+.footer-title .ft-3 {
+  left:185px;
+  top:58px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:5.4rem;
+  font-weight:600;
+}
+
+.footer-title .ft-4 {
+  left:65px;
+  top:122px;
+  font-family:'Outfit',sans-serif;
+  font-size:3.6rem;
+  font-weight:300;
+  letter-spacing:-.07em;
+}
+
+/* ПРАЗДНИКОВ */
+
+.footer-title .ft-5 {
+  left:8px;
+  top:205px;
+  font-family:'Outfit',sans-serif;
+  font-size:3.8rem;
+  font-weight:300;
+  letter-spacing:-.08em;
+}
+
+.footer-title .ft-6 {
+  left:155px;
+  top:188px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:6rem;
+  font-weight:500;
+}
+
+.footer-title .ft-7 {
+  left:225px;
+  top:260px;
+  font-family:'Outfit',sans-serif;
+  font-size:3.4rem;
+  font-weight:400;
+  letter-spacing:-.07em;
+}
+
+.footer-title .ft-8 {
+  left:315px;
+  top:232px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:5rem;
+  font-weight:500;
 }
 
 /* Девушка строго по центру */
@@ -544,7 +595,6 @@ nav.scrolled .nav-cta .btn { color:var(--ink); border-color:var(--ink); }
   max-width:1280px;
   margin:0 auto;
   padding-top:1.2rem;
-  border-top:1px solid rgba(255,252,250,.16);
   display:flex;
   justify-content:space-between;
   font-size:.72rem;
@@ -649,8 +699,6 @@ nav.scrolled .nav-cta .btn { color:var(--ink); border-color:var(--ink); }
   .layout-33 .cell { height:46vh; min-height:280px; }
   .photo-full { height:60vh; min-height:380px; }
   .cta { height:52vh; min-height:340px; margin:22px 3.5% 36px; }
-  footer { margin:0 3% 20px; border-radius:12px; }
-  .footer-main { grid-template-columns:1fr 1fr; }
   .modal-card {
     grid-template-columns: 1fr;
     width: min(100%, 94vw);
@@ -667,8 +715,6 @@ nav.scrolled .nav-cta .btn { color:var(--ink); border-color:var(--ink); }
   .photo-full, .layout-23 .big, .layout-23 .small,
   .layout-12 .cell, .layout-33 .cell { border-radius:12px; }
   .cta { margin:16px 3% 28px; border-radius:12px; }
-  footer { margin:0 2.5% 16px; border-radius:10px; }
-  .footer-main { grid-template-columns:1fr; }
   .footer-bottom { flex-direction:column; gap:.4rem; text-align:center; }
   .hero-buttons, .cta-buttons { flex-direction:column; align-items:center; }
 }
@@ -876,13 +922,6 @@ img {
   .inquiry-messengers {
     flex-direction: column;
   }
-  .footer-heroine img {
-    width: 64px;
-    height: 78px;
-  }
-  footer {
-    padding: 2.8rem 5% 1.4rem;
-  }
 }
 
 </style>
@@ -1036,13 +1075,15 @@ img {
   <div class="footer-stage">
 
     <div class="footer-title">
-  <div class="footer-word footer-word-top">
-    <span class="f-serif">ОФОР</span><span class="f-sans">МЛЕНИЕ</span>
-  </div>
+  <span class="ft-1">ОФ</span>
+  <span class="ft-2">ОР</span>
+  <span class="ft-3">МЛЕ</span>
+  <span class="ft-4">НИЕ</span>
 
-  <div class="footer-word footer-word-bottom">
-    <span class="f-sans">ПРАЗД</span><span class="f-serif">НИКОВ</span>
-  </div>
+  <span class="ft-5">ПРА</span>
+  <span class="ft-6">ЗД</span>
+  <span class="ft-7">НИ</span>
+  <span class="ft-8">КОВ</span>
 </div>
 
     <div class="footer-figure">

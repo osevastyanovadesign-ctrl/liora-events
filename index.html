@@ -146,9 +146,10 @@ nav.scrolled .nav-cta .btn { color:var(--ink); border-color:var(--ink); }
 .hero-content {
   position:relative;
   z-index:3;
-  max-width:680px;
+  width:100%;
+  max-width:none;
   padding:0 1.4rem;
-  transform:translateX(-6%);
+  transform:translateY(8%);
 }
 .hero-label {
   font-size:.7rem;
@@ -162,9 +163,19 @@ nav.scrolled .nav-cta .btn { color:var(--ink); border-color:var(--ink); }
 .hero h1 {
   font-size:clamp(2.8rem,6vw,4.5rem);
   color:var(--white);
-  margin-bottom:1.2rem;
+  margin-bottom:.55rem;
   opacity:0; animation:up 1.05s .5s ease forwards;
-  text-align:left;
+  text-align:center;
+  white-space:nowrap;
+}
+  .hero-subtitle {
+  font-size:.68rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--gold-soft);
+  margin-bottom:1.5rem;
+  opacity:0;
+  animation:up 1s .65s ease forwards;
 }
 .hero h1 em { font-style:italic; color:var(--gold-soft); }
 .hero-buttons {
@@ -826,7 +837,6 @@ img {
     <a href="#inquiry" class="btn btn-solid">Оставить заявку</a>
     <a href="#works" class="btn btn-light">Смотреть работы</a>
   </div>
-</div>
 </div>
   <div class="scroll-hint">Листайте</div>
 </section>

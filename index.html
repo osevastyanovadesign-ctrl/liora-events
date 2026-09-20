@@ -212,7 +212,18 @@ nav.scrolled .nav-cta .btn { color:var(--ink); border-color:var(--ink); }
   text-transform:uppercase;
   text-align:center;
   opacity:0;
-  animation:up .9s 1.4s ease forwards;
+  animation:scrollHintUp .9s 1.4s ease forwards;
+}
+
+@keyframes scrollHintUp {
+  from {
+    opacity:0;
+    transform:translateX(-50%) translateY(28px);
+  }
+  to {
+    opacity:1;
+    transform:translateX(-50%) translateY(0);
+  }
 }
 
 /* ========== LAYOUTS ========== */

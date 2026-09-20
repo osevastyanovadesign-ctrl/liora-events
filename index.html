@@ -1276,23 +1276,23 @@ const observer = new IntersectionObserver((entries) => {
   rootMargin: '0px 0px -6% 0px'
 });
 reveals.forEach(el => observer.observe(el));
-  const footerTrigger = document.querySelector('.footer-trigger');
+  const footer = document.querySelector('.liora-footer');
 const footerFigure = document.querySelector('.footer-figure');
 
-if (footerTrigger && footerFigure) {
+if (footer && footerFigure) {
   const footerObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
 
       footerFigure.classList.add('visible');
-      footerObserver.unobserve(footerTrigger);
+      footerObserver.unobserve(footer);
     });
   }, {
-    threshold: 0,
-    rootMargin: '0px'
+    threshold: 0.01,
+    rootMargin: '0px 0px -20% 0px'
   });
 
-  footerObserver.observe(footerTrigger);
+  footerObserver.observe(footer);
 }
 
 // Modal

@@ -451,7 +451,14 @@ nav.scrolled .nav-cta .btn { color:var(--ink); border-color:var(--ink); }
 .cta-content p { opacity:.85; margin-bottom:1.8rem; }
 .cta-buttons { display:flex; gap:.9rem; justify-content:center; flex-wrap:wrap; }
   /* FOOTER — LIORA FINAL SCENE */
-
+.footer-trigger {
+  position:absolute;
+  top:0;
+  left:0;
+  width:1px;
+  height:1px;
+  pointer-events:none;
+}
 .liora-footer {
   position:relative;
   margin:0 3.5% 28px;
@@ -1200,6 +1207,7 @@ nav.scrolled .nav-cta .btn {
 
 <!-- FOOTER -->
 <footer class="liora-footer">
+  <div class="footer-trigger"></div>
   <div class="footer-stage">
 
     <div class="footer-title">
@@ -1268,22 +1276,23 @@ const observer = new IntersectionObserver((entries) => {
   rootMargin: '0px 0px -6% 0px'
 });
 reveals.forEach(el => observer.observe(el));
-  const footerFigure = document.querySelector('.footer-figure');
+  const footerTrigger = document.querySelector('.footer-trigger');
+const footerFigure = document.querySelector('.footer-figure');
 
-if (footerFigure) {
+if (footerTrigger && footerFigure) {
   const footerObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
 
       footerFigure.classList.add('visible');
-      footerObserver.unobserve(footerFigure);
+      footerObserver.unobserve(footerTrigger);
     });
   }, {
     threshold: 0,
-    rootMargin: '0px 0px -45% 0px'
+    rootMargin: '0px'
   });
 
-  footerObserver.observe(footerFigure);
+  footerObserver.observe(footerTrigger);
 }
 
 // Modal

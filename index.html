@@ -1072,10 +1072,70 @@ nav.scrolled .nav-cta .btn {
 .liora-footer .footer-bottom {
   border-top-color:rgba(255,252,250,.16);
 }
+/* FLOATING PHONE */
+.floating-phone {
+  position:fixed;
+  right:28px;
+  bottom:28px;
+  width:54px;
+  height:54px;
+  border-radius:50%;
+  background:var(--sage-deep);
+  color:var(--white);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:350;
+  box-shadow:0 10px 28px rgba(28,25,22,.16);
+  opacity:0;
+  transform:translateY(18px) scale(.9);
+  transition:
+    opacity .5s ease,
+    transform .5s cubic-bezier(.16,1,.3,1),
+    background .3s ease;
+  pointer-events:none;
+}
 
+.floating-phone.visible {
+  opacity:1;
+  transform:translateY(0) scale(1);
+  pointer-events:auto;
+}
+
+.floating-phone svg {
+  width:21px;
+  height:21px;
+  stroke:currentColor;
+  stroke-width:1.7;
+  fill:none;
+}
+
+.floating-phone.visible {
+  animation:phonePulse 2.8s 1.2s ease-in-out infinite;
+}
+
+@keyframes phonePulse {
+  0%,100% { box-shadow:0 10px 28px rgba(28,25,22,.16); }
+  50% { box-shadow:0 10px 28px rgba(28,25,22,.16), 0 0 0 7px rgba(102,117,90,.10); }
+}
+
+@media (max-width:600px) {
+  .floating-phone {
+    right:18px;
+    bottom:18px;
+    width:50px;
+    height:50px;
+  }
+}
 </style>
 </head>
 <body>
+
+<button class="floating-phone" id="floatingPhone" type="button" aria-label="Позвонить">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M6.6 3.5l2.1-.5c.5-.1 1 .2 1.2.7l1 2.7c.2.4.1.9-.3 1.2L9.2 9c1.1 2.2 2.7 3.8 4.9 4.9l1.4-1.4c.3-.3.8-.4 1.2-.3l2.7 1c.5.2.8.7.7 1.2l-.5 2.1c-.1.6-.7 1-1.3 1C10.4 17.5 6.5 13.6 6.5 8.1c0-.6.4-1.2 1-1.3z"/>
+  </svg>
+</button>
 
 <nav id="navbar">
   <a href="#" class="logo">LIORA</a>
@@ -1347,6 +1407,16 @@ window.addEventListener('scroll', () => {
 // Navbar — passive
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
+  // Floating phone button
+const floatingPhone = document.getElementById('floatingPhone');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 120) {
+    floatingPhone.classList.add('visible');
+  } else {
+    floatingPhone.classList.remove('visible');
+  }
 }, { passive: true });
 </script>
 </body>

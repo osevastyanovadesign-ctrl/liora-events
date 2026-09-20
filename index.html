@@ -1081,8 +1081,9 @@ nav.scrolled .nav-cta .btn {
   height:54px;
   border-radius:50%;
   background:var(--gold);
-  color:var(--white);
-  display:flex;
+color:var(--white);
+border:none;
+display:flex;
   align-items:center;
   justify-content:center;
   z-index:350;
@@ -1100,8 +1101,19 @@ nav.scrolled .nav-cta .btn {
   opacity:1;
   transform:translateY(0) scale(1);
   pointer-events:auto;
-  animation:phoneAppear 1s cubic-bezier(.16,1,.3,1) forwards,
-            phonePulse 3.2s 1.4s ease-in-out infinite;
+}
+  .floating-phone.visible svg {
+  animation:phoneRock 1.8s ease-in-out infinite;
+  transform-origin:50% 50%;
+}
+
+@keyframes phoneRock {
+  0%,100% {
+    transform:rotate(-10deg);
+  }
+  50% {
+    transform:rotate(10deg);
+  }
 }
 
 .floating-phone:hover {

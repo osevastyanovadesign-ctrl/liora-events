@@ -199,11 +199,19 @@ nav.scrolled .nav-cta .btn { color:var(--ink); border-color:var(--ink); }
   to { opacity:1; transform:translateY(0); }
 }
 .scroll-hint {
-  position:absolute; bottom:2.8rem; left:50%;
-  transform:translateX(-50%); z-index:4;
+  position:absolute;
+  bottom:2.8rem;
+  left:50%;
+  width:max-content;
+  transform:translateX(-50%);
+  z-index:4;
   color:rgba(255,252,250,.4);
-  font-size:.62rem; letter-spacing:.18em; text-transform:uppercase;
-  opacity:0; animation:up .9s 1.4s ease forwards;
+  font-size:.62rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  text-align:center;
+  opacity:0;
+  animation:up .9s 1.4s ease forwards;
 }
 
 /* ========== LAYOUTS ========== */

@@ -184,9 +184,31 @@ nav.scrolled .nav-cta .btn { color:var(--ink); border-color:var(--ink); }
   font-size:clamp(2.8rem,6vw,4.5rem);
   color:var(--white);
   margin-bottom:.55rem;
-  opacity:0; animation:up 1.05s .5s ease forwards;
+  opacity:0;
+  animation:up 1.05s .5s ease forwards;
   text-align:center;
-  white-space:nowrap;
+  white-space:normal;
+}
+
+.hero-name,
+.hero-service {
+  display:block;
+}
+
+.hero-name {
+  margin-bottom:.08em;
+}
+
+@media (max-width:600px) {
+  .hero h1 {
+    font-size:clamp(2.35rem,10vw,3.5rem);
+    line-height:.9;
+  }
+
+  .hero-service {
+    max-width:320px;
+    margin:0 auto;
+  }
 }
   .hero-subtitle {
   font-size:.68rem;
@@ -1193,7 +1215,7 @@ display:flex;
 </button>
 
 <nav id="navbar">
-  <a href="#" class="logo">LIORA</a>
+  <a href="#" class="logo">ЕКАТЕРИНА</a>
   <ul class="nav-links">
     <li><a href="#works">Работы</a></li>
     <li><a href="#types">Праздники</a></li>
@@ -1213,7 +1235,10 @@ display:flex;
     <div class="hero-overlay"></div>
   </div>
   <div class="hero-content">
-  <h1>ОФОРМЛЕНИЕ ПРАЗДНИКОВ</h1>
+  <h1>
+  <span class="hero-name">ЕКАТЕРИНА</span>
+  <span class="hero-service">ОФОРМЛЕНИЕ ПРАЗДНИКОВ</span>
+</h1>
   <p class="hero-subtitle">свадьбы · частные праздники · корпоративы</p>
   <div class="hero-buttons">
     <a href="#inquiry" class="btn btn-solid">Оставить заявку</a>

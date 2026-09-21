@@ -1376,6 +1376,31 @@ display:flex;
 const navbar = document.getElementById('navbar');
 // navbar handled in passive block below
 
+// Hero video — force autoplay on mobile
+const heroVideo = document.getElementById('heroVideo');
+
+function startHeroVideo() {
+  if (!heroVideo) return;
+
+  heroVideo.muted = true;
+  heroVideo.setAttribute('muted', '');
+  heroVideo.playsInline = true;
+  heroVideo.setAttribute('playsinline', '');
+
+  const playPromise = heroVideo.play();
+
+  if (playPromise !== undefined) {
+    playPromise.catch(() => {});
+  }
+}
+
+window.addEventListener('load', startHeroVideo);
+window.addEventListener('pageshow', startHeroVideo);
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden) {
+    startHeroVideo();
+  }
+});
 // Reveal
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preload" as="image" href="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=800&auto=format&fit=crop&q=75">
-<title>Liora — Оформление праздников</title>
+<title>ЕАТЕРИНА — Оформление праздников</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
@@ -555,11 +555,21 @@ nav.scrolled .nav-cta .btn { color:var(--ink); border-color:var(--ink); }
 
 .footer-title span {
   display:block;
-  width:100%;
-  text-align:justify;
-  text-align-last:justify;
+  width:max-content;
   margin-left:0 !important;
-  transform:none !important;
+  transform-origin:left center;
+}
+
+.footer-title span:nth-child(1) {
+  transform:scaleX(1.32);
+}
+
+.footer-title span:nth-child(2) {
+  transform:scaleX(1);
+}
+
+.footer-title span:nth-child(3) {
+  transform:scaleX(1.08);
 }
 /* Девушка строго по центру */
 .footer-figure {

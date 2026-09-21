@@ -1192,6 +1192,50 @@ display:flex;
       0 0 0 7px rgba(197,176,138,.16);
   }
 }
+  @media (max-width:600px) {
+  .liora-footer {
+    margin:0 3% 16px;
+    min-height:760px;
+    padding:0;
+    border-radius:14px;
+    overflow:hidden;
+  }
+
+  .footer-stage {
+    position:relative;
+    inset:auto;
+    width:100%;
+    height:760px;
+    max-width:none;
+    margin:0;
+  }
+}
+  @media (max-width:600px) {
+  .footer-title {
+    position:absolute;
+    left:8%;
+    top:2.5rem;
+    transform:none;
+    width:84%;
+    z-index:3;
+    align-items:stretch;
+    font-size:clamp(2.5rem,11vw,3.8rem);
+    line-height:.86;
+    white-space:nowrap;
+  }
+
+  .footer-title span {
+    width:max-content;
+    margin-left:0 !important;
+    transform-origin:left center;
+  }
+
+  .footer-title span:nth-child(1),
+  .footer-title span:nth-child(2),
+  .footer-title span:nth-child(3) {
+    transform:none;
+  }
+}
 </style>
 </head>
 <body>

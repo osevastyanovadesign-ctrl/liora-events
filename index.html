@@ -1192,53 +1192,59 @@ display:flex;
       0 0 0 7px rgba(197,176,138,.16);
   }
 }
- @media (max-width:600px) {
-  .liora-footer {
-    margin:0 3% 16px;
-    min-height:760px;
-    padding:0;
-    border-radius:14px;
-    overflow:hidden;
-  }
-
-  .footer-stage {
-    position:relative;
-    inset:auto;
-    width:100%;
-    height:760px;
-    max-width:none;
-    margin:0;
-  }
-
-  .footer-title,
-  .footer-actions {
-    display:none;
-  }
+  /* MOBILE FOOTER TOP */
+.footer-mobile-top {
+  display:none;
 }
-  @media (max-width:600px) {
-  .footer-title {
-    position:absolute;
-    left:8%;
-    top:2.5rem;
-    transform:none;
-    width:84%;
-    z-index:3;
-    align-items:stretch;
+
+@media (max-width:600px) {
+  .footer-mobile-top {
+    display:block;
+    margin:20px 3% 0;
+    padding:2.4rem 1.4rem 1.8rem;
+    background:var(--sage-deep);
+    color:var(--white);
+    border-radius:14px 14px 0 0;
+  }
+
+  .footer-mobile-title {
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    font-family:'Cormorant Garamond',serif;
     font-size:clamp(2.5rem,11vw,3.8rem);
     line-height:.86;
+    font-weight:500;
+    color:var(--ivory);
+    letter-spacing:-.045em;
     white-space:nowrap;
   }
 
-  .footer-title span {
-    width:max-content;
-    margin-left:0 !important;
-    transform-origin:left center;
+  .footer-mobile-actions {
+    display:flex;
+    flex-direction:column;
+    gap:.65rem;
+    margin-top:2rem;
   }
 
-  .footer-title span:nth-child(1),
-  .footer-title span:nth-child(2),
-  .footer-title span:nth-child(3) {
-    transform:none;
+  .footer-mobile-actions a {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:42px;
+    padding:.7rem 1rem;
+    border:1px solid rgba(255,252,250,.48);
+    color:var(--ivory);
+    font-family:'Outfit',sans-serif;
+    font-size:.65rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+  }
+
+  .footer-mobile-actions .footer-action-main {
+    background:var(--sage-deep);
+    border-color:var(--white);
+    color:var(--white);
   }
 }
 </style>
@@ -1411,8 +1417,6 @@ display:flex;
   </div>
 
 </div>
-
-<footer class="liora-footer">
 
 <!-- FOOTER -->
 <footer class="liora-footer">
